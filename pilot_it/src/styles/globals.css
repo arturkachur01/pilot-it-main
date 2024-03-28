@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.show-on-scroll {
+  visibility: hidden;
+  animation-name: slideInFromLeft;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.show-on-scroll:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.show-on-scroll:nth-child(3) {
+  animation-delay: 0.4s;
+}
